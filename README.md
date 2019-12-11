@@ -15,12 +15,12 @@
 ## Danh sách
 
 - [x] [0x00 - Tutorial](0x00)
-  - [ ] Ex 1
+  - [x] Ex 1
 - [ ] [0x01 - Encoding](0x01)
-  - [ ] Ex 1
-  - [ ] Ex 2
-  - [ ] Ex 3
-  - [ ] Ex 4
+  - [x] Ex 1
+  - [x] Ex 2
+  - [x] Ex 3
+  - [x] Ex 4
   - [ ] Ex 5
 - [ ] [0x02 - PHP](0x02)
   - [ ] Ex 1
