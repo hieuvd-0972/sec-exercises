@@ -49,4 +49,6 @@ Bài 4:
   end"
   thì đây là kiểu mã hóa Uuencodeding -> decrypt ra FLAG_FeLgP3SiAWezWPHu
 
+Bài 5:
+Decode bằng base32 : matesctf{w3lc0m3_to_th3_f1n4l_r0und} 
 
